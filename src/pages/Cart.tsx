@@ -9,7 +9,6 @@ const Cart = () => {
   const { cart, removeFromCart, updateQuantity, getTotalPrice } = useCart();
   const navigate = useNavigate();
 
-  const imageUrl = `https://images.unsplash.com/photo-1611252428529-9bc0ce5a10dd?w=200&h=200&fit=crop`;
 
   if (cart.length === 0) {
     return (
@@ -46,7 +45,7 @@ const Cart = () => {
                   <div className="flex gap-4">
                     <div className="w-24 h-24 rounded-lg overflow-hidden bg-secondary flex-shrink-0">
                       <img
-                        src={imageUrl}
+                        src={item.image}
                         alt={item.name}
                         className="w-full h-full object-cover"
                       />

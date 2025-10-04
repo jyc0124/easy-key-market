@@ -12,15 +12,13 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
   const { addToCart } = useCart();
 
-  // Placeholder image URL - will be replaced with actual images
-  const imageUrl = `https://images.unsplash.com/photo-1611252428529-9bc0ce5a10dd?w=400&h=400&fit=crop`;
 
   return (
     <Card className="group overflow-hidden transition-all hover:shadow-lg">
       <Link to={`/product/${product.id}`}>
         <div className="aspect-square overflow-hidden bg-secondary">
           <img
-            src={imageUrl}
+            src={product.image}
             alt={product.name}
             className="h-full w-full object-cover transition-transform group-hover:scale-105"
           />

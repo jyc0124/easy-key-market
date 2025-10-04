@@ -24,7 +24,7 @@ const ProductDetail = () => {
     );
   }
 
-  const imageUrl = `https://images.unsplash.com/photo-1611252428529-9bc0ce5a10dd?w=800&h=800&fit=crop`;
+  const imageUrl = product.image;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/30">
